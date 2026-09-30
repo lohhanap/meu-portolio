@@ -1,2 +1,2 @@
 # Meu-site
-Meu portfólio pessoal desenvolvido com HTML5 e CSS3
+Portfólio pessoal desenvolvido com HTML e CSS, apresentando minha formação acadêmica, experiências, habilidades e formas de contato.
