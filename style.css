@@ -6,7 +6,7 @@ body, html {
 	height: 100%;
 }
 
-/* MENU DE NAV */
+/* MENU NAV */
 #menu {
     width: 100%;
     background-color: #100b2400;
@@ -56,14 +56,12 @@ body, html {
     display: none;
 }
 
-/*responsividade*/
 @media (max-width: 768px) {
 
     .nav-wrapper {
         position: relative;
     }
 
-    /* MOSTRA O HAMBÚRGUER */
     #menu-toggle {
         display: block;
         color: #f571af;
@@ -72,7 +70,6 @@ body, html {
         width: fit-content;
     }
 
-    /* MENU FECHADO */
     .nav-wrapper ul {
         display: none;
         position: static;
@@ -84,18 +81,15 @@ body, html {
         text-align: center;
     }
 
-    /* MENU ABERTO */
     #menu-check:checked ~ ul {
         display: flex;
     }
 
-    /* LINKS NO CELULAR */
     .nav-wrapper a {
         font-size: 1.2rem;
     }
 }
-/* FIM MENU DE NAV */
-
+/* FIM MENU NAV */
 
 
 /*AJUSTANDO O BANNER INICIO*/
@@ -204,13 +198,12 @@ body, html {
     padding: 6rem 0;
 }
 
-/* apagar essa fonte tosca dps*/
+/* apagar essa fonte dps*/
 .sobre-mim h1{
     font: 35px "Lucida Console", monospace; 
     text-decoration: underline; /*sublinhado*/
     text-underline-offset: 6px;
     text-align: center;
-    height: 100%;
     color: #f571af;
 }
 
@@ -225,7 +218,7 @@ body, html {
     word-wrap: break-word;    
 }
 
-/* RESPONSIVIDADE - CELULAR */
+
 @media (max-width: 600px) {
 
     .caixa2 {
@@ -244,6 +237,7 @@ body, html {
 /*SOBRE MIM - FIM*/
 
 
+
 /*FORMAÇÃO INÍCIO*/
 .caixa3{
     padding: 6rem 0;
@@ -258,66 +252,81 @@ body, html {
     color: #f571af;
 }
 
-
+/* TIMELINE */
 .timeline {
     position: relative;
-    width: 70%;
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-/* Linha vertical */
+
+/* LINHA VERTICAL */
 .timeline::before {
     content: "";
     position: absolute;
-    top: 10px;
-    bottom: 10px;
     left: 10px;
-    width: 4px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
     background-color: #fff;
 }
 
-/* Cada formação */
+
+/* CADA FORMAÇÃO */
 .timeline-item {
     position: relative;
-    padding-left: 70px;
-    margin-bottom: 6rem;
+    padding-left: 4rem;
+    margin-bottom: 4rem;
 }
 
-/* Bolinha */
+
+/* BOLINHA */
 .ponto {
     position: absolute;
     left: 2px;
     top: 5px;
     width: 20px;
     height: 20px;
-    background-color: #fff8fc;
+    background-color: #fff;
     border-radius: 50%;
 }
 
-/* Texto */
+
+/* CAIXA */
 .timeline-conteudo {
+    padding: 1.5rem 2rem;
+    border: 2px solid #cda3ff;
+    border-radius: 12px;
+    background-color: #130e25;
     text-align: left;
 }
 
+
+/* DATA */
 .timeline-conteudo span {
-    color: #cda3ff;
     font-family: "Lucida Console", monospace;
-    font-size: 1.2rem;
+    color: #cda3ff;
+    font-size: 1.1rem;
 }
 
+
+/* CURSO */
 .timeline-conteudo h2 {
-    color: white;
     font-family: "Lato", sans-serif;
-    font-size: 1.4rem;
-    margin: 0.5rem 0;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.7rem 0 0.3rem;
 }
 
+
+/* INSTITUICAOO */
 .timeline-conteudo p {
-    color: #ccc;
     font-family: "Lato", sans-serif;
-    font-size: 1.2rem;
+    color: #ee0371;
+    font-size: 1.3rem;
+    margin: 0;
 }
+
 
 @media (max-width: 600px) {
 
@@ -335,12 +344,16 @@ body, html {
     }
 
     .timeline-item {
-        padding-left: 45px;
+        padding-left: 3rem;
         margin-bottom: 3rem;
     }
 
+    .timeline-conteudo {
+        padding: 1.2rem 1.5rem;
+    }
+
     .timeline-conteudo span {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .timeline-conteudo h2 {
@@ -356,7 +369,6 @@ body, html {
 
 
 /* HABILIDADES - INÍCIO */
-
 .caixa4 {
     padding: 6rem 1.5rem;
 }
@@ -385,7 +397,6 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     text-align: center;
 }
 
@@ -400,12 +411,11 @@ body, html {
 }
 
 
-/* ÍCONES DO FONT AWESOME */
 .icone i {
     font-size: 75px;
 }
 
-/* NOME DAS HABILIDADES */
+/* NOME DAS HABIL*/
 .skill-item p {
     font-family: "Lato", sans-serif;
     font-size: 1rem;
@@ -413,7 +423,6 @@ body, html {
     margin-top: 1rem;
 }
 
-/* CORES INDIVIDUAIS */
 .icone1 {
     background-color:#F54927;
 }
@@ -451,10 +460,7 @@ body, html {
 
     .habilidades {
         width: 100%;
-
-        /* 2 ícones por linha */
         grid-template-columns: repeat(2, 1fr);
-
         gap: 2.5rem 1.5rem;
     }
 
@@ -467,7 +473,6 @@ body, html {
         font-size: 40px;
     }
 }
-
 /*HABILIDADE FIM*/
 
 
@@ -489,7 +494,6 @@ body, html {
 }
 
 
-/* TIMELINE */
 .experiencias-timeline {
     position: relative;
     max-width: 900px;
@@ -509,7 +513,7 @@ body, html {
 }
 
 
-/* Cada experiência */
+/* DESCREVENDO AS EXPERIENCIAS */
 .experiencia-item {
     position: relative;
     padding-left: 4rem;
@@ -542,7 +546,7 @@ body, html {
 .experiencia-data {
     font-family: "Lucida Console", monospace;
     color: #cda3ff;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 
@@ -551,15 +555,17 @@ body, html {
     font-family: "Lato", sans-serif;
     color: white;
     margin: 0.7rem 0 0.3rem;
+    font-size: 1.5rem;
 }
 
 
 /* Empresa / instituição */
 .experiencia-conteudo h3 {
     font-family: "Lato", sans-serif;
-    color: #f571af;
+    color: #ee0371;
     margin: 0 0 1rem;
     font-weight: normal;
+    font-size: 1.3rem;
 }
 
 
@@ -567,11 +573,12 @@ body, html {
 .experiencia-conteudo p {
     font-family: "Lato", sans-serif;
     line-height: 1.7rem;
+    font-size: 1.2rem;
     color: #ddd;
 }
 
 
-/* Tecnologias / competências */
+/*TAGS*/
 .experiencia-tags {
     display: flex;
     flex-wrap: wrap;
@@ -584,9 +591,126 @@ body, html {
     border: 1px solid #cda3ff;
     border-radius: 20px;
     font-family: "Lato", sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
-/*EXPERIENCIA FIM*/
+
+
+@media (max-width: 600px) {
+
+    .experiencias {
+        padding: 4rem 1.5rem;
+    }
+
+    .experiencias h1 {
+        font-size: 28px;
+        margin-bottom: 3rem;
+    }
+
+    .experiencias-timeline {
+        width: 100%;
+    }
+
+    .experiencia-item {
+        padding-left: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .experiencia-conteudo {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .experiencia-data {
+        font-size: 0.9rem;
+    }
+
+    .experiencia-conteudo h2 {
+        font-size: 1.2rem;
+    }
+
+    .experiencia-conteudo h3 {
+        font-size: 1.1rem;
+    }
+
+    .experiencia-conteudo p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .experiencia-tags {
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .experiencia-tags span {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+/* EXPERIENCIA FIM */
+
+
+
+/*CONTATO INICIO*/
+.caixa5{
+    text-align: center;
+    padding: 5rem 1.5rem;
+}
+
+.caixa5 h1{
+    font: 35px "Lucida Console", monospace;
+    color: #f571af;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    margin-bottom: 4rem;
+}
+
+.caixa5 h2{
+    font-size: 20px;
+}
+
+.caixa5 p{
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.botao-email {
+    background-color: #ab6ef7;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.botao-email:hover {
+    background-color: #cda3ff;
+}
+
+.contato-icones {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.contato-icones a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contato-icones i {
+    font-size: 2.5rem;
+}
+
+.contato-icones a:hover {
+    color: #600197;
+}
+/*CONTATO FIM*/
+
+
 
 /*RODAPÉ*/
 footer{
