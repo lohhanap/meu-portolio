@@ -1,0 +1,599 @@
+/*----CONFIGURAÇÃO DA PÁGINA----*/
+body, html {
+    background-color: #130e25;
+	font: 12px "Monaco", monospace;
+	color: #fff;
+	height: 100%;
+}
+
+/* MENU DE NAV */
+#menu {
+    width: 100%;
+    background-color: #100b2400;
+    padding: 2rem 0;
+}
+
+/* largura */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Lista do menu */
+.nav-wrapper ul {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Links */
+.nav-wrapper a {
+    color: white;
+    text-decoration: none;
+    font-family: "Lucida Console", monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+/* efeito de quando passa o mouse */
+.nav-wrapper a:hover {
+    color: #f571af;
+}
+
+/* Botão de hamburguer */
+#menu-toggle {
+    display: none;
+}
+
+/* ESCONDE O CHECKBOX */
+#menu-check {
+    display: none;
+}
+
+/*responsividade*/
+@media (max-width: 768px) {
+
+    .nav-wrapper {
+        position: relative;
+    }
+
+    /* MOSTRA O HAMBÚRGUER */
+    #menu-toggle {
+        display: block;
+        color: #f571af;
+        font-size: 2rem;
+        cursor: pointer;
+        width: fit-content;
+    }
+
+    /* MENU FECHADO */
+    .nav-wrapper ul {
+        display: none;
+        position: static;
+        transform: none;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    /* MENU ABERTO */
+    #menu-check:checked ~ ul {
+        display: flex;
+    }
+
+    /* LINKS NO CELULAR */
+    .nav-wrapper a {
+        font-size: 1.2rem;
+    }
+}
+/* FIM MENU DE NAV */
+
+
+
+/*AJUSTANDO O BANNER INICIO*/
+.banner{
+	background: url("imagens/capa.png");
+    background-size: cover; /*aumenta e diminui p cobrir o banner*/
+    background-position: center; /*deixa ela no centro*/
+    background-repeat: no-repeat; /*tira a repetiçao do banner*/
+	height: 650px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+/*FIM DO AJUSTE DO BANNER*/
+
+
+/*DIV TOPO COMEÇO*/
+/*Ajustando imagem principal*/
+.topo-imagem img{ 
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*Texto e sub-texto*/
+.topo-texto h1{
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.topo-texto h2{
+    text-align: center;
+    font-size: 15px;
+    border: 2px solid #cda3ff;
+    border-radius: 60px;
+    padding: 15px 1px;
+    width: 450px;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+
+    .banner {
+        height: 550px;
+        padding: 0 20px;
+    }
+
+    .topo-imagem img {
+        width: 220px;
+        height: 220px;
+        margin-top: 30px;
+    }
+
+    .topo-texto h1 {
+        font-size: 35px;
+    }
+
+    .topo-texto h2 {
+        width: 100%;
+        max-width: 350px;
+        font-size: 13px;
+        padding: 12px 10px;
+    }
+}
+/*DIV TOPO FIM*/
+
+
+
+/*CONTATOS, VOU COLOCAR CLICAVEL*/
+.caixa-contatos{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+} 
+
+.linkedin img{
+    border-radius: 45px;
+    margin-top: 10px;
+    width: 40px;
+    height: 35px;
+}
+
+.github img{
+    border-radius: 45px;
+    margin-top: 10px;
+    width: 45px;
+    height: 40px;
+}
+/*CONTATOS FIM*/
+
+
+
+/*SOBRE MIM - COMEÇO*/
+.caixa2{
+    padding: 6rem 0;
+}
+
+/* apagar essa fonte tosca dps*/
+.sobre-mim h1{
+    font: 35px "Lucida Console", monospace; 
+    text-decoration: underline; /*sublinhado*/
+    text-underline-offset: 6px;
+    text-align: center;
+    height: 100%;
+    color: #f571af;
+}
+
+.sobre-mim p{
+    font-family: "Lato", sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2.25rem;
+    max-width: 600px;
+    width: 100%;
+    font-size: 20px;
+    word-wrap: break-word;    
+}
+
+/* RESPONSIVIDADE - CELULAR */
+@media (max-width: 600px) {
+
+    .caixa2 {
+        padding: 4rem 1.5rem;
+    }
+
+    .sobre-mim h1 {
+        font-size: 28px;
+    }
+
+    .sobre-mim p {
+        font-size: 16px;
+        line-height: 1.8rem;
+    }
+}
+/*SOBRE MIM - FIM*/
+
+
+/*FORMAÇÃO INÍCIO*/
+.caixa3{
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #130e25, #aa4e794d);
+}
+
+.formacao h1{
+    font: 35px "Lucida Console", monospace; 
+    text-decoration: underline; /*sublinhado*/
+    text-underline-offset: 6px;
+    text-align: center;
+    color: #f571af;
+}
+
+
+.timeline {
+    position: relative;
+    width: 70%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Linha vertical */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: 4px;
+    background-color: #fff;
+}
+
+/* Cada formação */
+.timeline-item {
+    position: relative;
+    padding-left: 70px;
+    margin-bottom: 6rem;
+}
+
+/* Bolinha */
+.ponto {
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff8fc;
+    border-radius: 50%;
+}
+
+/* Texto */
+.timeline-conteudo {
+    text-align: left;
+}
+
+.timeline-conteudo span {
+    color: #cda3ff;
+    font-family: "Lucida Console", monospace;
+    font-size: 1.2rem;
+}
+
+.timeline-conteudo h2 {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+
+.timeline-conteudo p {
+    color: #ccc;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+
+    .caixa3 {
+        padding: 4rem 1.5rem;
+    }
+
+    .formacao h1 {
+        font-size: 28px;
+        margin-bottom: 3rem;
+    }
+
+    .timeline {
+        width: 100%;
+    }
+
+    .timeline-item {
+        padding-left: 45px;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-conteudo span {
+        font-size: 1rem;
+    }
+
+    .timeline-conteudo h2 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-conteudo p {
+        font-size: 1rem;
+    }
+}
+/*FORMAÇÃO FIM*/
+
+
+
+/* HABILIDADES - INÍCIO */
+
+.caixa4 {
+    padding: 6rem 1.5rem;
+}
+
+.skill-icones h1{
+    font: 35px "Lucida Console", monospace; 
+    text-decoration: underline; /*sublinhado*/
+    text-underline-offset: 6px;
+    text-align: center;
+    color: #f571af;
+}
+
+.habilidades {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    /* 4 ícones por linha */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+/* CADA HABILIDADE */
+.skill-item {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* BOLINHAS */
+.icone {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ÍCONES DO FONT AWESOME */
+.icone i {
+    font-size: 75px;
+}
+
+/* NOME DAS HABILIDADES */
+.skill-item p {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+/* CORES INDIVIDUAIS */
+.icone1 {
+    background-color:#F54927;
+}
+
+.icone2 {
+    background-color: #2798F5;
+}
+
+.icone3 {
+    color: #0869b9;
+    background-color: #e0e400;
+}
+
+.icone4 {
+    color: #fff;
+    background-color: #000000;
+}
+
+.icone5 {
+    color: #ffffff;
+    background-color: #018ea7;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+
+    .caixa4 {
+        padding: 4rem 1.5rem;
+    }
+
+    .skill-icones h1 {
+        font-size: 28px;
+        margin-bottom: 3rem;
+    }
+
+    .habilidades {
+        width: 100%;
+
+        /* 2 ícones por linha */
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 2.5rem 1.5rem;
+    }
+
+    .icone {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icone i {
+        font-size: 40px;
+    }
+}
+
+/*HABILIDADE FIM*/
+
+
+
+/*EXPERIENCIA INICIO*/
+.experiencias {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #130e25, #aa4e794d);
+
+}
+
+.experiencias h1 {
+    font: 35px "Lucida Console", monospace;
+    color: #f571af;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    margin-bottom: 4rem;
+}
+
+
+/* TIMELINE */
+.experiencias-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* Linha */
+.experiencias-timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #fff;
+}
+
+
+/* Cada experiência */
+.experiencia-item {
+    position: relative;
+    padding-left: 4rem;
+    margin-bottom: 4rem;
+}
+
+
+/* Bolinha */
+.experiencia-ponto {
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+
+/* Conteúdo */
+.experiencia-conteudo {
+    padding: 1.5rem 2rem;
+    border: 2px solid #cda3ff;
+    border-radius: 12px;
+    background-color: #130e25;
+}
+
+
+/* Data */
+.experiencia-data {
+    font-family: "Lucida Console", monospace;
+    color: #cda3ff;
+    font-size: 1rem;
+}
+
+
+/* Cargo */
+.experiencia-conteudo h2 {
+    font-family: "Lato", sans-serif;
+    color: white;
+    margin: 0.7rem 0 0.3rem;
+}
+
+
+/* Empresa / instituição */
+.experiencia-conteudo h3 {
+    font-family: "Lato", sans-serif;
+    color: #f571af;
+    margin: 0 0 1rem;
+    font-weight: normal;
+}
+
+
+/* Descrição */
+.experiencia-conteudo p {
+    font-family: "Lato", sans-serif;
+    line-height: 1.7rem;
+    color: #ddd;
+}
+
+
+/* Tecnologias / competências */
+.experiencia-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+}
+
+.experiencia-tags span {
+    padding: 0.5rem 1rem;
+    border: 1px solid #cda3ff;
+    border-radius: 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+}
+/*EXPERIENCIA FIM*/
+
+/*RODAPÉ*/
+footer{
+	background-color: #130e25;
+	padding: 1.5rem;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 5rem;
+	font-size: 1rem;
+}
